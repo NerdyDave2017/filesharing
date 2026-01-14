@@ -1,13 +1,15 @@
-package main
+package api
 
 import (
 	"fmt"
 	"log"
 	"net/http"
+
+	"github.com/nerdydave2017/filesharing/internal/bootstrap"
 )
 
 func main() {
-	app, err := App()
+	app, err := bootstrap.App()
 	if err != nil {
 		panic(err)
 	}
